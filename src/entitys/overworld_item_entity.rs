@@ -1,7 +1,7 @@
+use malkmusl_log::print_info_debug;
 use uuid::Uuid;
 use rand::prelude::*;
 
-use crate::console::print_info_debug;
 use crate::sytsems::OVERWORLD_ITEM_COUNT;
 
 use super::entity::Entity;

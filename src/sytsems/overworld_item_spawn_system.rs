@@ -1,13 +1,13 @@
 use std::{future::Future, pin::Pin};
 
-use console::{print_error, print_info, print_info_debug};
 use entitys::entity::Entity;
 use entitys::overworld_item_entity::OverworldItemEntity;
 
 use entitys::OVERWORLD_ITEMS;
+use malkmusl_log::{print_error, print_info, print_info_debug};
 use tokio::time::{self, Duration};
 
-use crate::{console, entitys};
+use crate::entitys;
 
 use super::{System, MAX_OVERWORLD_ITEM_ENTITIES, OVERWORLD_ITEM_COUNT};
 

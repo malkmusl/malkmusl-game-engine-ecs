@@ -1,13 +1,14 @@
-use console::{print_error, print_info, print_info_debug};
 use entitys::entity::Entity;
 use entitys::pokemon_entity::PokemonEntity;
 use entitys::BASIC_ENTITIES;
+use malkmusl_log::{print_error, print_info, print_info_debug};
 use std::future::Future;
 use std::pin::Pin;
 use std::thread::{self};
 use std::time::Duration;
 
-use crate::{console, entitys};
+
+use crate::entitys;
 
 use super::{System, MAX_POKEMON_ENTITIES, POKEMON_COUNT};
 

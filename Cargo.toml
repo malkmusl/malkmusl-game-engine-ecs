@@ -5,11 +5,17 @@ edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+[malkmusl_log]
+name = "malkmusl_renderer"
+version = "0.1.0"
+edition = "2021"
+
 [dependencies]
+malkmusl_log = { path = "../malkmusl_log" }
+
 async-trait = "0.1.77"
 lazy_static = "1.4.0"
 rand = "0.8.5"
-termcolor = "1.4.1"
 tokio = { version = "1.35.1", features = ["full"] }
 
 [dependencies.uuid]
@@ -19,3 +25,5 @@ features = [
     "fast-rng",
     "macro-diagnostics",
 ]
+
+

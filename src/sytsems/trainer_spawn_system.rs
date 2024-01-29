@@ -1,13 +1,14 @@
-use console::{print_error, print_info, print_info_debug};
 use entitys::entity::Entity;
 use entitys::trainer_entity::TrainerEntity;
 use entitys::TRAINERS;
+use malkmusl_log::{print_error, print_info, print_info_debug};
 use std::future::Future;
 use std::pin::Pin;
 use std::thread::{self};
 use std::time::Duration;
 
-use crate::{console, entitys};
+
+use crate::entitys;
 
 use super::{System, MAX_TRAINER_ENTITIES, TRAINER_COUNT};
 
