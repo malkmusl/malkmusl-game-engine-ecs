@@ -23,7 +23,7 @@ impl System for OverworldItemSpawnSystem {
 
                 // Wait for both tasks to complete
                 tokio::try_join!(spawn_handle, despawn_handle)
-                    .expect(print_error("Error waiting for tasks to complete"));
+                    .expect(&print_error("Error waiting for tasks to complete", None, None));
             }
         })
     }
@@ -32,7 +32,7 @@ impl System for OverworldItemSpawnSystem {
 impl OverworldItemSpawnSystem {
     async fn spawn() {
         unsafe {
-            print_info("Starting Spawn Overworld Item Handle...");
+            print_info("Starting Spawn Overworld Item Handle...", None, None);
             loop {
                 // Overworld Item entity spawning
                 while *OVERWORLD_ITEM_COUNT.lock().unwrap() < MAX_OVERWORLD_ITEM_ENTITIES {
@@ -44,7 +44,7 @@ impl OverworldItemSpawnSystem {
                         item_entity.id(),
                         item_entity.name()
                     );
-                    print_info_debug(&message);
+                    print_info_debug(&message, None, None);
     
                     // Sleep for 10 seconds before the next iteration
                     time::sleep(Duration::from_millis(100)).await;
@@ -55,7 +55,7 @@ impl OverworldItemSpawnSystem {
 
     async fn despawn() {
         unsafe {
-            print_info("Starting Despawn Overworld Item Handle...");
+            print_info("Starting Despawn Overworld Item Handle...", None, None);
             loop {
                 // Tick and despawn entities
                 let mut index = 0;

@@ -1,0 +1,1 @@
+pub const ERROR_WAITING_TASKS: &str = "Error waiting for tasks to complete";

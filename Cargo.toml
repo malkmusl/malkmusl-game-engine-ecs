@@ -11,6 +11,11 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+glutin = "0.30.10"
+glium = "0.32.1"
+winit = "0.27.5"
+vulkano = "0.33.0"
+na = "0.32.2"
 malkmusl_log = { path = "../malkmusl_log" }
 
 async-trait = "0.1.77"

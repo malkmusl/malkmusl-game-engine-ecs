@@ -46,7 +46,7 @@ impl Entity for PokemonEntity {
         if self.lifetime <= 0 {
             // Perform despawning logic here
             let message = format!("Pokemon Entity with ID {} despawned.", self.entity_id);
-            print_info_debug(&message);
+            print_info_debug(&message, None, None);
 
     
             // Find the index of the entity in BASIC_ENTITIES vector
